@@ -14,8 +14,8 @@ app.get('/default/Plants', (req, res) => {
 
 app.post('/default/Plants/getValue', (req, res) => {
     //const { side1, side2, side3 } = req.body;
-    //const result = getValue();
-    //res.json({ result });
+    const result = getValue();
+    res.json({ result });
 })
 module.exports.handler = serverless(app);
 /*
