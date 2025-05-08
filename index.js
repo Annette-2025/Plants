@@ -1,6 +1,7 @@
 //var http = require('http');
 //var fs = require('fs');
 //var url = require('url');
+/*
 const express = require('express');
 const serverless = require('serverless-http');
 const app = express();
@@ -19,7 +20,8 @@ app.post('/default/Plant-Water-Scheduler/pages/plantList', (req, res) => {
     const result = getValue();
     res.json({ result });
 })
-/*
+*/
+
 const port = 1001
 
 http.createServer((req, res)=>{
@@ -40,7 +42,7 @@ http.createServer((req, res)=>{
 }).listen(port);
 console.log("server running on port " + port + "\nAccess Webpage here: " + "http://localhost:" + port + "/pages/calendar.html");
 
-*/
+
 
 
 
