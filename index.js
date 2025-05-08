@@ -1,6 +1,6 @@
-//var http = require('http');
-//var fs = require('fs');
-//var url = require('url');
+var http = require('http');
+var fs = require('fs');
+var url = require('url');
 /*
 const express = require('express');
 const serverless = require('serverless-http');
