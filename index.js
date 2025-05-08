@@ -17,7 +17,7 @@ app.post('/default/Plants/getValue', (req, res) => {
     //const result = getValue();
     //res.json({ result });
 })
-
+module.exports.handler = serverless(app);
 /*
 var http = require('http');
 var fs = require('fs');
