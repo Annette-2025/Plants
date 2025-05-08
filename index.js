@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/default/Plants', (req, res) => {
-    res.sendFile(__dirname + '/pages/calendar.html');
+    res.sendFile(__dirname + '/pages/plantList.html');
 })
 
 app.post('/default/Plants/getValue', (req, res) => {
