@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-app.get('/default/Plant-Water-Scheduler', (req, res) => {
+app.get('/default/Plants', (req, res) => {
     res.sendFile(__dirname + '/pages/calendar.html');
 })
 /*
