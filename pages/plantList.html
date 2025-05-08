@@ -89,7 +89,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="february.html">Feb</a>
+                        <a href="#">Feb</a>
                     </td>
                 </tr>
                 <tr>
@@ -99,12 +99,12 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="april.html">Apr</a>
+                        <a href="#">Apr</a>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="may.html">May</a>
+                        <a href="#">May</a>
                     </td>
                 </tr>
                 <tr>
@@ -226,14 +226,6 @@
         }
         
 
-
-        
-        //for (i = 0; i < data.length; ++i) {
-            //let li = document.createElement('li');
-            //li.innerText = data[i];
-            //list.appendChild(li);
-        //}
-
         function getValue() {
             //make a localstorage object for warnings
             //also, If I delete a plant it goes by name only, and it will delete all plants with the same name
@@ -282,39 +274,7 @@
             cat1 = name1 + ", " + month + "/" + day + "/" + year;
             update(cat1);
         }
-
-        //This function creates a series of popups to save information on a new plant object
-  /*      
-        function popup() {
-            //alert("hello world!");
-            name1 = window.prompt("Enter a plant name:", "type here");
-            if (name1 == null || name1 == ""){return;}
-            do {
-                year1 = window.prompt("Enter year:", "type here");
-                if (year1 == null || year1 == ""){return;}
-            } while(year1 != 2025);
-            do {
-                month1 = window.prompt("Enter month:", "type here");
-                if (month1 == null || month1 == ""){return;}
-            } while(month1 < 1 || month1 > 12);
-            do {
-                max = 31;
-                day1 = window.prompt("Enter day:", "type here");
-                if (day1 == null || day1 == ""){return;}
-                if (month1 == 2){max = 28;}
-                    else if (month1 == 4 || month1 == 6 || month1 == 9 || month1 == 11){max = 30;}
-                        else {max = 31;}
-                //if (month == 1 || month == 3 || month == 5 || month == 7 || month == )
-            } while(day1 < 1 || day1 > max);
-            
-            newObject = { name: name1, year: year1, month: month1, day: day1 };
-            obj.plants.push(newObject);
-            JSON_String = JSON.stringify(obj);
-            localStorage.setItem("plants", JSON_String);
-            cat1 = name1 + ", " + month1 + "/" + day1 + "/" + year1;
-            update(cat1);
-        }
-*/
+  
         //This appends a new plant object to the list containing the information the user just input
         function update(text) {
             let li = document.createElement('li');
@@ -346,27 +306,10 @@
                     
                     //alert(obj.plants[i].name + ", " + name)
                     if (obj.plants[i].name == name || (obj.plants[i].year == year && obj.plants.month == month && obj.plants.day == day)){
-                        //alert("t2")
-                        //obj.plants.pop(1)
-                        //delete obj.plants[i];
-                        //obj.splice(i, 1);
-                        //obj.splice(obj.plants[i], 1);
-                        //alert(obj.plants[i].name + ", " + name)
+                      
                         
                         let res = obj.plants.filter(obj => obj.name !== name);
-                        //let res = res1.filter(obj => obj.name !== "undefined")
-                        //alert(obj.plants)
-                        //const r = JSON.parse(res)
-                        //alert(r)
-                        //----//obj.plants.pop()
-                        
-                        //obj.plants.pop()
-                        //alert("obj length:" + obj.plants.length)
-                        //for (j=1; j < obj.plants.length; j++){
-                            //alert("popped")
-                            //obj.plants.pop()
-                            
-                        //}
+                       
                         localStorage.setItem("plants", data);
                         getData = localStorage.getItem("plants");
                         const newObj = JSON.parse(getData);
@@ -378,10 +321,7 @@
 
                         }
                         
-                        //obj.plants.shift()
-                        //alert(obj.plants[1].name)
-                        //alert("RES:\n" + res)
-                        //alert(res.length)
+                       
                         target.remove();
                         
                         JSON_String = JSON.stringify(newObj);
