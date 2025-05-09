@@ -23,11 +23,7 @@ app.get('/default/Plants', (req, res) => {
                 res.sendFile(__dirname + '/pages/calendar.html');
                 break;
             default:
-                html = `
-                    <html><body>
-                        <h1>404 Not Found</h1>
-                        <a href="/">Back to Home</a>
-                    </body></html>`;
+                res.sendFile(__dirname + '/pages/plantList.html');
         }
     
         return {
