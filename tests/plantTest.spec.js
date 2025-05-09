@@ -81,21 +81,25 @@ test('january has title', async ({ page }) => {
 test('add item to list', async ({ page }) => {
     await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
     // create a new todo locator
-    const locator = page.getByPlaceholder("name");
+    //const locator = page.getByPlaceholder("name");
     
     // Create 1st todo.
-    await locator.fill("ficus");
-    await locator.press('Tab');
-    await locator.fill('2025');
-    await locator.press('Tab');
-    await locator.fill('1');
-    await locator.press('Tab');
-    await locator.fill('1');
-    await locator.press('Tab');
-    await locator.click();
+    await page.getByPlaceholder('name').fill('ficus');
+    await page.getByPlaceholder('year').fill('2025');
+    await page.getByPlaceholder('month').fill('month');
+    await page.getByPlaceholder('day').fill('day');
+    await page.getByRole('button', {id: 'submit1'});
+    //await locator.press('Tab');
+    //await locator.fill('2025');
+    //await locator.press('Tab');
+    //await locator.fill('1');
+    //await locator.press('Tab');
+    //await locator.fill('1');
+    //await locator.press('Tab');
+    //await locator.click();
 
     const list = page.getByRole('ul', {id: 'myList'});
-    await expect(locator).toBeVisible();
+    await expect(page).toBeVisible();
     await page.waitForTimeout(1000);
 });
 /*
