@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 //--------------------CHECK THAT EACH PAGE EXISTS-----------------------------
-
+/*
 test('plantList has title', async ({ page }) => {
   await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
   // Expect a title "to contain" a substring.
@@ -67,9 +67,33 @@ test('january has title', async ({ page }) => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Plant Calendar/);
   });
+*/
 
 
+  const TODO_ITEMS = [
+    'ficus',
+    2025,
+    1,
+    1
+  ];
 
+
+test('add item to list', async ({ page }) => {
+    await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
+    // create a new todo locator
+    const locator = page.getByRole('input', {id: 'Name'});
+
+    // Create 1st todo.
+    await locator.fill(TODO_ITEMS[0]);
+    await locator.press('Tab');
+    await locator.fill(TODO_ITEMS[1]);
+    await locator.press('Tab');
+    await locator.fill(TODO_ITEMS[2]);
+    await locator.press('Tab');
+    await locator.fill(TODO_ITEMS[3]);
+    await locator.press('Enter');
+    //const list = page.getByRole()
+});
 
 
 /*
