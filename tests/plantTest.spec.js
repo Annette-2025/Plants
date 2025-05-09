@@ -99,7 +99,7 @@ test('add item to list', async ({ page }) => {
     //await locator.click();
 
     const list = page.getByRole('ul', {id: 'myList'});
-    await expect(page).toBeVisible();
+    await expect(list).toBeVisible();
     await page.waitForTimeout(1000);
 });
 /*
