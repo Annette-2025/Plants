@@ -85,12 +85,12 @@ test('add item to list', async ({ page }) => {
     
     // Create 1st todo.
     await locator.fill("ficus");
-    //await locator.press('Tab');
-    //await locator.fill(TODO_ITEMS[1]);
-    //await locator.press('Tab');
-    //await locator.fill(TODO_ITEMS[2]);
-    //await locator.press('Tab');
-    //await locator.fill(TODO_ITEMS[3]);
+    await locator.press('Tab');
+    await locator.fill(2025);
+    await locator.press('Tab');
+    await locator.fill(1);
+    await locator.press('Tab');
+    await locator.fill(1);
     //await locator.press('Enter');
 
     const list = page.getByRole('ul', {id: 'myList'});
