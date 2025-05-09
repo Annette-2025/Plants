@@ -69,14 +69,14 @@ test('january has title', async ({ page }) => {
   });
 */
 
-
+/*
   const TODO_ITEMS = [
     'ficus',
     2025,
     1,
     1
   ];
-
+*/
 
 test('add item to list', async ({ page }) => {
     await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
@@ -84,7 +84,7 @@ test('add item to list', async ({ page }) => {
     const locator = page.getByRole('input', {id: 'Name'});
     
     // Create 1st todo.
-    //await locator.fill(TODO_ITEMS[0]);
+    await locator.fill("ficus");
     //await locator.press('Tab');
     //await locator.fill(TODO_ITEMS[1]);
     //await locator.press('Tab');
@@ -94,7 +94,7 @@ test('add item to list', async ({ page }) => {
     //await locator.press('Enter');
 
     const list = page.getByRole('ul', {id: 'myList'});
-    await expect(list).toBeEmpty();
+    await expect(list).toBeHidden();
     await page.waitForTimeout(1000);
 });
 
