@@ -12,6 +12,9 @@ app.get('/default/Plants', (req, res) => {
     res.sendFile(__dirname + '/pages/plantList.html');
 })
 
+app.get('/default/page2', (req, res) => {
+    res.sendFile(__dirname + '/pages/calendar.html');
+})
 
 app.post('/default/Plants/getValue', (req, res) => {
     //const { side1, side2, side3 } = req.body;
