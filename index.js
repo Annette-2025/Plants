@@ -16,10 +16,11 @@ app.get('/default/page2', (req, res) => {
     res.sendFile(__dirname + '/pages/calendar.html');
 })
 
-app.post('/default/Plants/getValue', (req, res) => {
+app.post('/default/Plants', (req, res) => {
+    res.sendFile(__dirname + '/pages/plantList.html');
     //const { side1, side2, side3 } = req.body;
-    const result = getValue();
-    res.json({ result });
+    //const result = getValue();
+    //res.json({ result });
 })
 module.exports.handler = serverless(app);
 /*
