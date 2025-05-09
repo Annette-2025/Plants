@@ -82,7 +82,7 @@ test('add item to list', async ({ page }) => {
     await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
     // create a new todo locator
     const locator = page.getByRole('input', {id: 'Name'});
-
+    
     // Create 1st todo.
     await locator.fill(TODO_ITEMS[0]);
     await locator.press('Tab');
@@ -92,7 +92,10 @@ test('add item to list', async ({ page }) => {
     await locator.press('Tab');
     await locator.fill(TODO_ITEMS[3]);
     await locator.press('Enter');
-    //const list = page.getByRole()
+
+    const list = page.getByRole('ul', {id: 'myList'});
+    await expect(list).toBeVisible();
+    await page.waitForTimeout(5000);
 });
 
 
