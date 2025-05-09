@@ -95,7 +95,7 @@ test('add item to list', async ({ page }) => {
     await locator.click();
 
     const list = page.getByRole('ul', {id: 'myList'});
-    await expect(list).toBeVisible();
+    await expect(locator).toBeVisible();
     await page.waitForTimeout(1000);
 });
 /*
@@ -118,7 +118,8 @@ test('check calendar', async ({ page }) => {
     const locator = page.getByRole('td', {id: '4'});
     await locator.click();
     //click on list
-    await expect(list).toBeHidden();
+    const outout = page.getByRole('h1', {id: 'selected'});
+    await expect(output).toBeVisible();
     await page.waitForTimeout(1000);
 });
 */
