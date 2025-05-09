@@ -91,7 +91,8 @@ test('add item to list', async ({ page }) => {
     await locator.fill('1');
     await locator.press('Tab');
     await locator.fill('1');
-    await locator.press('Enter');
+    await locator.press('Tab');
+    await locator.click();
 
     const list = page.getByRole('ul', {id: 'myList'});
     await expect(list).toBeVisible();
@@ -109,6 +110,19 @@ test('remove item from list', async ({ page }) => {
     await page.waitForTimeout(1000);
 });
 */
+/*
+test('check calendar', async ({ page }) => {
+    await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/page2');
+    
+
+    const locator = page.getByRole('td', {id: '4'});
+    await locator.click();
+    //click on list
+    await expect(list).toBeHidden();
+    await page.waitForTimeout(1000);
+});
+*/
+
 
 /*
 test('get started link', async ({ page }) => {
