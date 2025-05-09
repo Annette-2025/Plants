@@ -81,7 +81,7 @@ test('january has title', async ({ page }) => {
 test('add item to list', async ({ page }) => {
     await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
     // create a new todo locator
-    const locator = page.getByRole('input', {id: 'Name'});
+    const locator = page.getByPlaceholder("name");
     
     // Create 1st todo.
     await locator.fill("ficus");
