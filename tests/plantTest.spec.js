@@ -91,10 +91,10 @@ test('add item to list', async ({ page }) => {
     await locator.fill('1');
     await locator.press('Tab');
     await locator.fill('1');
-    //await locator.press('Enter');
+    await locator.press('Enter');
 
     const list = page.getByRole('ul', {id: 'myList'});
-    await expect(list).toBeHidden();
+    await expect(list).toBeVisible();
     await page.waitForTimeout(1000);
 });
 /*
@@ -103,12 +103,13 @@ test('remove item from list', async ({ page }) => {
     
 
     const list = page.getByRole('ul', {id: 'myList'});
+    await list.click();
     //click on list
     await expect(list).toBeHidden();
     await page.waitForTimeout(1000);
 });
-
 */
+
 /*
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
