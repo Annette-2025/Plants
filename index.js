@@ -12,6 +12,42 @@ app.get('/default/Plants', (req, res) => {
     res.sendFile(__dirname + '/pages/plantList.html');
 })
 
+exports.handler = async (event) => {
+    const path = event.rawPath || "/";
+
+    let html;
+
+    switch (path) {
+        case "/":
+        case "/plantList.html":
+            res.sendFile(__dirname + '/pages/plantList.html');
+            break;
+        case "/calendar":
+            res.sendFile(__dirname + '/pages/plantList.html');
+            break;
+        case "/about":
+            html = `
+                <html><body>
+                    <h1>About Page</h1>
+                    <a href="/">Home</a>
+                </body></html>`;
+            break;
+        default:
+            html = `
+                <html><body>
+                    <h1>404 Not Found</h1>
+                    <a href="/">Back to Home</a>
+                </body></html>`;
+    }
+
+    return {
+        statusCode: 200,
+        headers: { "Content-Type": "text/html" },
+        body: html,
+    };
+};
+
+
 app.post('/default/Plants/getValue', (req, res) => {
     //const { side1, side2, side3 } = req.body;
     const result = getValue();
