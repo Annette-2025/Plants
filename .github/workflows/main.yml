@@ -20,7 +20,7 @@ jobs:
         run: npm install selenium-webdriver
 
       - name: Run tests
-        run: npm test
+        run: node test.js
 
   deploy:
     runs-on: ubuntu-latest
