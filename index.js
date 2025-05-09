@@ -40,6 +40,9 @@ app.get('/default/july', (req, res) => {
     res.sendFile(__dirname + '/pages/july.html');
 })
 
+app.get('/default/august', (req, res) => {
+    res.sendFile(__dirname + '/pages/august.html');
+})
 
 
 app.post('/default/Plants', (req, res) => {
