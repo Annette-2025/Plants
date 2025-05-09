@@ -88,7 +88,7 @@ test('add item to list', async ({ page }) => {
     await page.getByPlaceholder('year').fill('2025');
     await page.getByPlaceholder('month').fill('1');
     await page.getByPlaceholder('day').fill('1');
-    await page.getByRole('button', {id: 'submit1'});
+    await page.getByRole('button', {id: 'submit1'}).click();
     //await locator.press('Tab');
     //await locator.fill('2025');
     //await locator.press('Tab');
