@@ -156,7 +156,7 @@
     <!-- cellspacing is used to specify the 
         space between the cell and its contents -->
     <h2 align="center" id="Title" style="color: rgb(19, 104, 40);">
-        February 2025
+        March 2025
     </h2>
     <br />
  
@@ -298,7 +298,7 @@
 
 
         const day_to_id_offset = 6;
-        const calendar_month = 2;
+        const calendar_month = 3;
         highlight_date();
         getData = localStorage.getItem("plants");
         const obj = JSON.parse(getData);
@@ -412,7 +412,7 @@
                     y = y + day_to_id_offset;
                     if(obj.plants[i].month == calendar_month && id == y){
                         if(nameString.length == 0){
-                            nameString += "February " + x + ":\n" + obj.plants[i].name;
+                            nameString += "March " + x + ":\n" + obj.plants[i].name;
                         }else{
                             nameString = nameString + '\n' + obj.plants[i].name;
                         }

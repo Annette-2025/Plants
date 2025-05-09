@@ -20,6 +20,10 @@ app.get('/default/february', (req, res) => {
     res.sendFile(__dirname + '/pages/february.html');
 })
 
+app.get('/default/march', (req, res) => {
+    res.sendFile(__dirname + '/pages/march.html');
+})
+
 app.get('/default/april', (req, res) => {
     res.sendFile(__dirname + '/pages/april.html');
 })
@@ -27,6 +31,16 @@ app.get('/default/april', (req, res) => {
 app.get('/default/may', (req, res) => {
     res.sendFile(__dirname + '/pages/may.html');
 })
+
+app.get('/default/june', (req, res) => {
+    res.sendFile(__dirname + '/pages/june.html');
+})
+
+app.get('/default/july', (req, res) => {
+    res.sendFile(__dirname + '/pages/july.html');
+})
+
+
 
 app.post('/default/Plants', (req, res) => {
     res.sendFile(__dirname + '/pages/plantList.html');
