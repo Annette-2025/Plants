@@ -86,19 +86,29 @@ test('add item to list', async ({ page }) => {
     // Create 1st todo.
     await locator.fill("ficus");
     await locator.press('Tab');
-    await locator.fill(2025);
+    await locator.fill('2025');
     await locator.press('Tab');
-    await locator.fill(1);
+    await locator.fill('1');
     await locator.press('Tab');
-    await locator.fill(1);
+    await locator.fill('1');
     //await locator.press('Enter');
 
     const list = page.getByRole('ul', {id: 'myList'});
     await expect(list).toBeHidden();
     await page.waitForTimeout(1000);
 });
+/*
+test('remove item from list', async ({ page }) => {
+    await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
+    
 
+    const list = page.getByRole('ul', {id: 'myList'});
+    //click on list
+    await expect(list).toBeHidden();
+    await page.waitForTimeout(1000);
+});
 
+*/
 /*
 test('get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
