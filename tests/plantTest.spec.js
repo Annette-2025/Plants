@@ -86,8 +86,8 @@ test('add item to list', async ({ page }) => {
     // Create 1st todo.
     await page.getByPlaceholder('name').fill('ficus');
     await page.getByPlaceholder('year').fill('2025');
-    await page.getByPlaceholder('month').fill('month');
-    await page.getByPlaceholder('day').fill('day');
+    await page.getByPlaceholder('month').fill('1');
+    await page.getByPlaceholder('day').fill('1');
     await page.getByRole('button', {id: 'submit1'});
     //await locator.press('Tab');
     //await locator.fill('2025');
