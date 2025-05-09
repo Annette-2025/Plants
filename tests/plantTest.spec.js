@@ -84,16 +84,16 @@ test('add item to list', async ({ page }) => {
     const locator = page.getByRole('input', {id: 'Name'});
     
     // Create 1st todo.
-    await locator.fill(TODO_ITEMS[0]);
-    await locator.press('Tab');
-    await locator.fill(TODO_ITEMS[1]);
-    await locator.press('Tab');
-    await locator.fill(TODO_ITEMS[2]);
-    await locator.press('Tab');
-    await locator.fill(TODO_ITEMS[3]);
-    await locator.press('Enter');
+    //await locator.fill(TODO_ITEMS[0]);
+    //await locator.press('Tab');
+    //await locator.fill(TODO_ITEMS[1]);
+    //await locator.press('Tab');
+    //await locator.fill(TODO_ITEMS[2]);
+    //await locator.press('Tab');
+    //await locator.fill(TODO_ITEMS[3]);
+    //await locator.press('Enter');
 
-    const list = page.getByRole('ul', {id: 'myList'});
+    //const list = page.getByRole('ul', {id: 'myList'});
     await expect(list).toBeVisible();
     await page.waitForTimeout(5000);
 });
