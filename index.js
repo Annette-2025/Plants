@@ -9,32 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/default/Plants', (req, res) => {
-    exports.handler = async (event) => {
-        const path = event.rawPath || "/";
-    
-        let html;
-    
-        switch (path) {
-            case "/":
-            case "/plantList.html":
-                res.sendFile(__dirname + '/pages/plantList.html');
-                break;
-            case "/calendar":
-                res.sendFile(__dirname + '/pages/calendar.html');
-                break;
-            default:
-                res.sendFile(__dirname + '/pages/plantList.html');
-        }
-    
-        return {
-            statusCode: 200,
-            headers: { "Content-Type": "text/html" },
-            body: html,
-        };
-    };
+    res.sendFile(__dirname + '/pages/plantList.html');
 })
-
-
 
 
 app.post('/default/Plants/getValue', (req, res) => {
