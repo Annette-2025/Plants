@@ -11,3 +11,8 @@ async function example() {
         await driver.quit();
     }
 }example();
+
+//Would you like a working test using Playwright Test with a full HTML report?
+//playwright
+//Would you like to automate this in GitHub Actions as a CI pipeline?
+//Would you like to also deploy this test result report as a static page (e.g., GitHub Pages)?

@@ -1,13 +1,19 @@
 {
+    "name": "plants",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
     "dependencies": {
         "express": "^4.19.2",
         "selenium-webdriver": "^4.32.0",
         "serverless-http": "^3.2.0"
     },
     "devDependencies": {
-        "jest": "^29.7.0"
-    },
-    "scripts": {
-        "test": "jest"
+      "@playwright/test": "^1.52.0",
+      "@types/node": "^22.15.17"
     }
-}
+  }
