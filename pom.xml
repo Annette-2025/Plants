@@ -1,6 +1,0 @@
-<configuration>
-    <suiteXmlFiles>
-        ${surefire.suiteXmlFiles}
-    </suiteXmlFiles>
-    </configuration>
-</plugin>
