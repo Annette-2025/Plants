@@ -20,10 +20,14 @@ exports.handler = async (event) => {
     switch (path) {
         case "/":
         case "/plantList.html":
-            res.sendFile(__dirname + '/pages/plantList.html');
+            app.get('/default/Plants', (req, res) => {
+                res.sendFile(__dirname + '/pages/plantList.html');
+            })
             break;
         case "/calendar":
-            res.sendFile(__dirname + '/pages/plantList.html');
+            app.get('/default/Plants', (req, res) => {
+                res.sendFile(__dirname + '/pages/calendar.html');
+            })
             break;
         case "/about":
             html = `
