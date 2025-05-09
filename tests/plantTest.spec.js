@@ -93,7 +93,7 @@ test('add item to list', async ({ page }) => {
     //await locator.fill(TODO_ITEMS[3]);
     //await locator.press('Enter');
 
-    //const list = page.getByRole('ul', {id: 'myList'});
+    const list = page.getByRole('ul', {id: 'myList'});
     await expect(list).toBeVisible();
     await page.waitForTimeout(5000);
 });
