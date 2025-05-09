@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 //--------------------CHECK THAT EACH PAGE EXISTS-----------------------------
-/*
+
 test('plantList has title', async ({ page }) => {
   await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
   // Expect a title "to contain" a substring.
@@ -67,7 +67,7 @@ test('january has title', async ({ page }) => {
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Plant Calendar/);
   });
-*/
+
 
 /*
   const TODO_ITEMS = [
@@ -77,7 +77,7 @@ test('january has title', async ({ page }) => {
     1
   ];
 */
-
+/*
 test('add item to list', async ({ page }) => {
     await page.goto('https://ka5fc4sskf.execute-api.us-east-1.amazonaws.com/default/Plants');
     // create a new todo locator
