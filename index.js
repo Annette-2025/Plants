@@ -44,6 +44,22 @@ app.get('/default/august', (req, res) => {
     res.sendFile(__dirname + '/pages/august.html');
 })
 
+app.get('/default/september', (req, res) => {
+    res.sendFile(__dirname + '/pages/september.html');
+})
+
+app.get('/default/october', (req, res) => {
+    res.sendFile(__dirname + '/pages/october.html');
+})
+
+app.get('/default/november', (req, res) => {
+    res.sendFile(__dirname + '/pages/november.html');
+})
+
+app.get('/default/december', (req, res) => {
+    res.sendFile(__dirname + '/pages/december.html');
+})
+
 
 app.post('/default/Plants', (req, res) => {
     res.sendFile(__dirname + '/pages/plantList.html');
